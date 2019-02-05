@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="mainmenu">
+        <button id="test">Меню</button>
+        <ul class="menu">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Проекты</a></li>
+          <li><a href="">Блог</a></li>
+          <li><a href="">Контакты</a></li>
+          <li><a href="">Категории</a></li>
+        </ul>
+      </div>
+    </header>
+  </body>
+  <script>
+    const elem = document.getElementsByClassName('menu');
+    document.getElementById('test').addEventListener('click', () => {
+      const position = elem[0].style.display;
+      if (position !== 'block') {
+        elem[0].style.display = 'block';
+      } else {
+        elem[0].style.display = 'none';
+      }
+    });
+  </script>
+</html>
